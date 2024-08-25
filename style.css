@@ -1,0 +1,26 @@
+.myInput {
+    font-size: 2em;
+    border: 1px solid #ddd;
+    letter-spacing: 0.4em;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+.gameArea, select {
+    margin: auto;
+    text-align: center;
+}
+button:hover {    
+    background-color: darkred;
+    color: white;
+    cursor: grab;    
+}
+button {
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+}
+
