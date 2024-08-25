@@ -28,16 +28,14 @@ inWord.style.display = 'none';
 btn.style.display = 'none';
 selWordList.style.display = 'none';
 
-///game start values
 // https://docs.google.com/spreadsheets/d/1j73pDPxGyVnL_W0fV8WyKsp_AKo2xX4D4YZwRptRgh0/edit?usp=sharing
-//const myWords = ["bird","dog","cat","cow","horse", "giraffe", "elephant", "donkey", "monkey", "tiger"];// minimum 2 characters words or we end up in a loop
+
+///game start values
 let theWords = [];
 let myWords = [];
 const game = { sel: '', scramble: '', score: 0, incorrect: 0, wordsLeft: 0, played: myWords.length, inplay: false };
-//const id = '1j73pDPxGyVnL_W0fV8WyKsp_AKo2xX4D4YZwRptRgh0';
-let url = 'https://docs.google.com/spreadsheets/d/1j73pDPxGyVnL_W0fV8WyKsp_AKo2xX4D4YZwRptRgh0/gviz/tq?';
-// document.addEventListener('DOMContentLoaded', init);
 
+let url = 'https://docs.google.com/spreadsheets/d/1j73pDPxGyVnL_W0fV8WyKsp_AKo2xX4D4YZwRptRgh0/gviz/tq?';
 
 fetch(url)
     .then(res => res.text())
