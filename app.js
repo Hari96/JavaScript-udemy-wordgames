@@ -101,10 +101,13 @@ btn.addEventListener('click', (e) => {
         tempWord = game.sel;
         game.wordsLeft = myWords.length;
         game.scramble = sorter(game.sel);
+        if (game.score <= 0 && game.incorrect <= 0) {
+            scoreBoard.style.display = 'none';
+        }
         addScore();
         output.style.fontSize = '3em';
         output.style.letterSpacing = '0.4em';
-        inWord.setAttribute('maxlength', game.sel.length);
+        inWord.setAttribute('max_length', game.sel.length);
         inWord.focus();
         output.textContent = `${game.scramble}`;        
     }
@@ -119,7 +122,7 @@ inWord.addEventListener('keyup', (e) => {
 });
 
 function addScore() {
-    let tempOutput = `Score: <b>${game.score}</b> vs incorrect <i>(${game.incorrect})</i> <small>${game.wordsLeft}  words left</small>`;
+    let tempOutput = `Score: <b>${game.score}</b> vs incorrect <i>${game.incorrect}</i> <small>${game.wordsLeft}  words left</small>`;
     scoreBoard.innerHTML = tempOutput;    
 }
 
